@@ -143,8 +143,8 @@
         </div>
       </section>
       <section>
-        <h2 id="stars-art">Stars</h2>
-        <p>Click on the stars to make them spin.</p>
+        <h2 id="stars-art">Seeing Stars</h2>
+        <p>Feeling dizzy? Click on the stars to make them disappear.</p>
         <div id="bar-chart">
           <svg width="800" height="600">
             <!-- sky background -->
@@ -160,20 +160,23 @@
             <!-- And this to animate them: https://www.w3schools.com/graphics/svg_animation.asp -->
             <polygon
               id="yellow-star"
+              class="star"
               points="97,23 56,134 154,65 40,65 136,134"
               fill="LightYellow"
             >
               <animateTransform
+                class="spin"
                 attributeName="transform"
                 type="rotate"
                 from="0 100 80"
                 to="360 100 80"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
             <polygon
               id="pink-star"
+              class="star"
               points="197,323 156,434 254,365 140,365 236,434"
               fill="Pink"
             >
@@ -182,12 +185,13 @@
                 type="rotate"
                 from="0 197 380"
                 to="360 197 380"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
             <polygon
               id="purple-star"
+              class="star"
               points="397,223 356,334 454,265 340,265 436,334"
               fill="Thistle"
             >
@@ -196,12 +200,13 @@
                 type="rotate"
                 from="0 397 275"
                 to="360 397 275"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
             <polygon
               id="orange-star"
+              class="star"
               points="597,423 556,534 654,465 540,465 636,534"
               fill="PeachPuff"
             >
@@ -210,12 +215,13 @@
                 type="rotate"
                 from="0 597 475"
                 to="360 597 475"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
             <polygon
               id="cream-star"
+              class="star"
               points="697,123 656,234 754,165 640,165 736,234"
               fill="AntiqueWhite"
             >
@@ -224,12 +230,13 @@
                 type="rotate"
                 from="0 697 175"
                 to="360 697 175"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
             <polygon
               id="light-pink-star"
+              class="star"
               points="497,48 456,159 554,90 440,90 536,159"
               fill="LightPink"
             >
@@ -238,7 +245,7 @@
                 type="rotate"
                 from="0 497 120"
                 to="360 497 120"
-                dur="6s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </polygon>
@@ -257,5 +264,5 @@
       <p>Copyright &copy; 2026 Amanda Eng.</p>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script src="vis.js"></script>
 </html>

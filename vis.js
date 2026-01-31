@@ -1,10 +1,10 @@
-let svg = document.querySelector("svg");
+let stars = document.getElementsByClassName("star");
+console.log(stars);
 
-function spinStar (starID) {
-    document.getElementById(starID);
-    
-}
-
-function changeRadius() {
-  document.getElementById("circle1").setAttribute("r", "50");
+for (const star of stars) {
+  console.log(star);
+  star.addEventListener("click", () => {
+    console.log("clicked", star.id);
+    star.style.fill = "MidnightBlue";
+  });
 }
