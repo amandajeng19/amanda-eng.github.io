@@ -95,12 +95,11 @@ a:focus {
   font-style: italic;
 }
 
-/* NAVIGATION BAR ---------------------------------------------------------------------------------------------------- */
+/* NAVIGATION ---------------------------------------------------------------------------------------------------- */
 
 .nav-main {
   position: sticky;
   top: 0;
-  width: 100vw;
   z-index: 10;
 
   margin: 0;
@@ -127,4 +126,22 @@ a:focus {
 .nav-main a:hover,
 .nav-main a:active {
   background-color: var(--light-purple);
+}
+
+/* FOOTER ---------------------------------------------------------------------------------------------------- */
+footer {
+  z-index: 9;
+
+  margin: 0;
+  padding: 0.25rem 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  font-size: 0.8rem;
+
+  background-color: var(--white);
+  border-top: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
 }
