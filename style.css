@@ -113,7 +113,7 @@ a:focus {
   gap: 0.8rem;
 
   background-color: var(--white);
-  border-bottom: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
+  border-bottom: 1px solid var(--indigo); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
 }
 
 .nav-main a {
@@ -176,4 +176,33 @@ header {
 
 header h1 {
   margin: 0;
+}
+
+/* CARDS ---------------------------------------------------------------------------------------------------- */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.card {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+
+  flex: 1;
+  background-color: none;
+  border: 1px solid var(--light-grey);
+}
+.card h3,
+.card h4 {
+  margin: 0.5rem 0;
+}
+
+.card h4 {
+    color: var(--indigo);
+}
+
+.card * {
+  min-width: 16rem;
 }

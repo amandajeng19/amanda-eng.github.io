@@ -28,77 +28,82 @@
     <main>
       <section>
         <h2 id="skills">What can I do for you?</h2>
-        <div>
-          <h3>Technical skills</h3>
-          <ul>
-            <li>Design: Figma, Adobe Creative Suite</li>
-            <li>
-              Code: HTML, CSS, JavaScript, React, Drupal
-              <abbr title="Content Management System">CMS</abbr>
-            </li>
-            <li>Miscellaneous: Google Drive, Microsoft 365, Hootsuite</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Competencies</h3>
-          <ul>
-            <li>Graphic design, illustration, photography, copywriting</li>
-            <li>Project management, organization, event planning</li>
-          </ul>
+        <div class="row">
+          <div class="card">
+            <h3>Technical skills</h3>
+            <ul>
+              <li>Design: Figma, Adobe Creative Suite</li>
+              <li>
+                Code: HTML, CSS, JavaScript, React, Drupal
+                <abbr title="Content Management System">CMS</abbr>
+              </li>
+              <li>Miscellaneous: Google Drive, Microsoft 365, Hootsuite</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Competencies</h3>
+            <ul>
+              <li>Graphic design, illustration, photography, copywriting</li>
+              <li>Project management, organization, event planning</li>
+            </ul>
+          </div>
         </div>
       </section>
+
       <section>
         <h2>
           Get to know me,
           <span class="italics">professionally</span>
         </h2>
-        <div>
-          <h3 id="experience">As a designer</h3>
+        <div class="row">
+          <div class="card">
+            <h3 id="experience">As a designer</h3>
 
-          <div>
-            <h4>Digital Communications Assistant</h4>
-            <ul>
-              <li>
-                Fisheries &amp; Oceans Canada (<abbr
-                  title="Department of Fisheries and Oceans"
-                  >DFO</abbr
-                >), Pacific Region
-              </li>
-              <li>September 2023–August 2024</li>
-            </ul>
+            <div>
+              <h4>Digital Communications Assistant</h4>
+              <ul>
+                <li>
+                  Fisheries &amp; Oceans Canada (<abbr
+                    title="Department of Fisheries and Oceans"
+                    >DFO</abbr
+                  >), Pacific Region
+                </li>
+                <li>September 2023–August 2024</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Assistant Production Editor</h4>
+              <ul>
+                <li>
+                  The Peak, <abbr title="Simon Fraser University">SFU</abbr>’s
+                  student newspaper
+                </li>
+                <li>January 2023–April 2023</li>
+              </ul>
+            </div>
           </div>
+          <div class="card">
+            <h3 id="education">As a student</h3>
 
-          <div>
-            <h4>Assistant Production Editor</h4>
-            <ul>
-              <li>
-                The Peak, <abbr title="Simon Fraser University">SFU</abbr>’s
-                student newspaper
-              </li>
-              <li>January 2023–April 2023</li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 id="education">As a student</h3>
+            <div>
+              <h4>
+                <abbr title="Bachelor of Science">BSc</abbr>, Interactive Arts
+                &amp; Technology
+              </h4>
+              <ul>
+                <li>Simon Fraser University, Canada</li>
+                <li>September 2021–June 2027 (expected)</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4>
-              <abbr title="Bachelor of Science">BSc</abbr>, Interactive Arts
-              &amp; Technology
-            </h4>
-            <ul>
-              <li>Simon Fraser University, Canada</li>
-              <li>September 2021–June 2027 (expected)</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Exchange Term (5 months)</h4>
-            <ul>
-              <li>Nanyang Technological University, Singapore</li>
-              <li>August 2025–December 2025</li>
-            </ul>
+            <div>
+              <h4>Exchange Term (5 months)</h4>
+              <ul>
+                <li>Nanyang Technological University, Singapore</li>
+                <li>August 2025–December 2025</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -108,34 +113,36 @@
           Get to know me, <span class="italics">personally</span>
         </h2>
 
-        <div>
-          <h3>As a travel lover</h3>
-          <p>
-            I’m grateful for the chances I’ve had to explore the world. From my
-            2024 solo trip to Europe, to my 2025 exchange in Southeast Asia, I’m
-            endlessly curious to learn about new cultures (and food!).
-          </p>
-        </div>
-        <div>
-          <h3>As a theatre-goer</h3>
-          <p>
-            Musical theatre is so cool — the idea of so many talented people,
-            working hard at their craft, coming together for one magical
-            performance. My personal favourites are
-            <i>Hadestown</i> and <i>Frozen</i>.
-          </p>
-        </div>
-        <div>
-          <h3>
-            As an amateur
-            <span class="italics">[insert latest creative pursuit]</span>
-          </h3>
-          <p>
-            In my free time, I try my very best to get away from screens and
-            experiment with new hobbies. Recently, I’ve played with
-            <abbr title="digital single-lens reflex">DSLR</abbr> photography,
-            calligraphy, and cooking.
-          </p>
+        <div class="row interests">
+          <div class="card">
+            <h3>As a travel lover</h3>
+            <p>
+              I’m grateful for the chances I’ve had to explore the world. From
+              my 2024 solo trip to Europe, to my 2025 exchange in Southeast
+              Asia, I’m endlessly curious to learn about new cultures (and
+              food!).
+            </p>
+          </div>
+          <div class="card">
+            <h3>As a theatre-goer</h3>
+            <p>
+              Musical theatre is so cool — the idea of so many talented people,
+              working hard at their craft, coming together for one magical
+              performance. My personal favourites are
+              <i>Hadestown</i> and <i>Frozen</i>.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              As an amateur
+              <span class="italics">[insert latest creative pursuit]</span>
+            </h3>
+            <p>
+              In my free time, I try my very best to get away from screens and
+              experiment with new hobbies. Recently I’ve played with
+              photography, calligraphy, and cooking.
+            </p>
+          </div>
         </div>
       </section>
       <section>
