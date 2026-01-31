@@ -21,7 +21,7 @@
   --pink: #b2537c;
   --gold: #f4d4a1;
 
-  --light-purple: #bfc7ed;
+  --light-purple: #cdd3f2;
   --light-pink: #f3dae5;
 }
 
@@ -200,9 +200,38 @@ header h1 {
 }
 
 .card h4 {
-    color: var(--indigo);
+  color: var(--indigo);
 }
 
 .card * {
   min-width: 16rem;
+}
+
+/* ACCORDION ---------------------------------------------------------------------------------- */
+/* Learned to create the accordion from here: https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+.accordion {
+  width: 100%;
+  padding: 1rem;
+
+  background-color: var(--light-purple);
+
+  color: var(--black);
+  text-align: left;
+  border: 1px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:active,
+.accordion:hover {
+  background-color: var(--light-pink);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 1rem;
+  display: none;
+  overflow: hidden;
+
+  border: 1px solid var(--light-purple);
 }
