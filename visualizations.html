@@ -130,7 +130,7 @@
               Length of time (minutes)
             </text>
             <!-- sad face :( -->
-            <!-- Used this to make the curve: https://www.w3schools.com/graphics/svg_path.asp -->
+            <!-- Used this to learn how to make the curve: https://www.w3schools.com/graphics/svg_path.asp -->
             <circle cx="425" cy="515" r="3" fill="gray"></circle>
             <circle cx="445" cy="515" r="3" fill="gray"></circle>
             <path
@@ -139,6 +139,109 @@
               stroke-width="4"
               fill="none"
             />
+          </svg>
+        </div>
+      </section>
+      <section>
+        <h2 id="stars-art">Stars</h2>
+        <p>Click on the stars to make them spin.</p>
+        <div id="bar-chart">
+          <svg width="800" height="600">
+            <!-- sky background -->
+            <rect
+              x="0"
+              y="0"
+              width="800"
+              height="600"
+              fill="MidnightBlue"
+            ></rect>
+            <!-- stars -->
+            <!-- Used this to learn how to draw the star: https://www.w3schools.com/graphics/svg_polygon.asp -->
+            <!-- And this to animate them: https://www.w3schools.com/graphics/svg_animation.asp -->
+            <polygon
+              id="yellow-star"
+              points="97,23 56,134 154,65 40,65 136,134"
+              fill="LightYellow"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 100 80"
+                to="360 100 80"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="pink-star"
+              points="197,323 156,434 254,365 140,365 236,434"
+              fill="Pink"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 197 380"
+                to="360 197 380"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="purple-star"
+              points="397,223 356,334 454,265 340,265 436,334"
+              fill="Thistle"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 397 275"
+                to="360 397 275"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="orange-star"
+              points="597,423 556,534 654,465 540,465 636,534"
+              fill="PeachPuff"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 597 475"
+                to="360 597 475"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="cream-star"
+              points="697,123 656,234 754,165 640,165 736,234"
+              fill="AntiqueWhite"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 697 175"
+                to="360 697 175"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="light-pink-star"
+              points="497,48 456,159 554,90 440,90 536,159"
+              fill="LightPink"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 497 120"
+                to="360 497 120"
+                dur="6s"
+                repeatCount="indefinite"
+              />
+            </polygon>
           </svg>
         </div>
       </section>
