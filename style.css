@@ -1,5 +1,15 @@
 /* Amanda Eng's Portfolio */
 
+/* Breakpoint cheatsheet from IAT 339:
+  480px = 30rem
+  640px = 40rem
+  960px = 60rem
+  1024px = 64rem
+  1280px = 80rem
+  1440px = 90rem
+  1920px = 120rem
+*/
+
 :root {
   /* Created colour styles using CSS variables, learned from https://www.w3schools.com/css/css3_variables.asp */
   --black: #0b0a29;
@@ -15,6 +25,8 @@
   --light-pink: #f3dae5;
 }
 
+/* BASIC LAYOUT ---------------------------------------------------------------------------------------------------- */
+
 body {
   margin: 0;
 
@@ -24,4 +36,64 @@ body {
   font-family: "Vend Sans", Geneva, sans-serif;
   font-size: 1rem;
   font-weight: 400;
+}
+
+main {
+  margin: 3rem 12.5vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 2rem auto;
+}
+
+/* DEFAULT TEXT STYLING ---------------------------------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2rem;
+  padding-top: 1rem;
+}
+h2 {
+  font-size: 1.8rem;
+  padding-top: 0.5rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+
+p,
+ol,
+ul {
+  font-weight: 400;
+  max-width: 40rem;
+}
+
+a {
+  color: var(--purple);
+}
+a:hover,
+a:active,
+a:focus {
+  color: var(--pink);
+}
+
+.italics {
+  font-style: italic;
+}
+.lightweight {
+  font-weight: 300;
 }
