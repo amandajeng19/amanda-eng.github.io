@@ -1,0 +1,27 @@
+/* Amanda Eng's Portfolio */
+
+:root {
+  /* Created colour styles using CSS variables, learned from https://www.w3schools.com/css/css3_variables.asp */
+  --black: #0b0a29;
+  --dark-grey: #59585e;
+  --light-grey: #c5c4c9;
+  --white: #f8f8ff;
+
+  --purple: #3b4780;
+  --pink: #b2537c;
+  --gold: #f4d4a1;
+
+  --light-purple: #bfc7ed;
+  --light-pink: #f3dae5;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--white);
+  color: var(--black);
+
+  font-family: "Vend Sans", Geneva, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}

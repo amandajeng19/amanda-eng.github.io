@@ -1,0 +1,71 @@
+/* Vend Sans is a variable typeface designed by Bloom Type Foundry and Baptiste Guesnon. 
+ *  It’s listed under the SIL Open Font License, Version 1.1.
+ *  The files were downloaded from Google Fonts: https://fonts.google.com/specimen/Vend+Sans.
+*/
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Vend Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(fonts/VendSans-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Vend Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(fonts/VendSans-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Vend Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/VendSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Vend Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/VendSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Vend Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url(fonts/VendSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Vend Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url(fonts/VendSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Vend Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/VendSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Vend Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(fonts/VendSans-SemiBoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Vend Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/VendSans-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Vend Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(fonts/VendSans-BoldItalic.ttf) format("truetype");
+}
