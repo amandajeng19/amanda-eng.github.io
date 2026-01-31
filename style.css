@@ -1,0 +1,179 @@
+/* Amanda Eng's Portfolio */
+
+/* Breakpoint cheatsheet from IAT 339:
+  480px = 30rem
+  640px = 40rem
+  960px = 60rem
+  1024px = 64rem
+  1280px = 80rem
+  1440px = 90rem
+  1920px = 120rem
+*/
+
+:root {
+  /* Created colour styles using CSS variables, learned from https://www.w3schools.com/css/css3_variables.asp */
+  --black: #0b0a29;
+  --dark-grey: #59585e;
+  --light-grey: #c5c4c9;
+  --white: #f8f8ff;
+
+  --indigo: #181636;
+  --pink: #b2537c;
+  --gold: #f4d4a1;
+
+  --light-purple: #bfc7ed;
+  --light-pink: #f3dae5;
+}
+
+/* BASIC LAYOUT ---------------------------------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+
+  background-color: var(--white);
+  color: var(--black);
+
+  font-family: "Vend Sans", Geneva, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+main {
+  margin: 3rem 12.5vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 2rem auto;
+}
+
+/* DEFAULT TEXT STYLING ---------------------------------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2rem;
+  padding-top: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  padding-top: 0.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+
+p,
+ol,
+ul {
+  font-weight: 400;
+  max-width: 40rem;
+}
+
+a {
+  color: var(--indigo);
+}
+a:hover,
+a:active,
+a:focus {
+  color: var(--pink);
+}
+
+.italics {
+  font-style: italic;
+}
+.bold {
+  font-weight: 600;
+}
+
+/* NAVIGATION ---------------------------------------------------------------------------------------------------- */
+
+.nav-main {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  margin: 0;
+  padding: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
+}
+
+.nav-main a {
+  padding: 0 0.3rem;
+  border-radius: 0.1rem;
+
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+
+  color: var(--black);
+  background-color: none;
+}
+.nav-main a:hover,
+.nav-main a:active {
+  background-color: var(--light-purple);
+}
+
+/* FOOTER ---------------------------------------------------------------------------------------------------- */
+footer {
+  z-index: 9;
+
+  margin: 0;
+  padding: 0.25rem 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.8rem;
+
+  background-color: var(--white);
+  border-top: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
+}
+
+footer p {
+  padding: 0;
+  max-width: 30rem;
+}
+
+/* HEADER ---------------------------------------------------------------------------------------------------- */
+
+header {
+  padding: 4rem 2rem;
+  background-color: var(--indigo);
+  text-align: center;
+}
+
+.header-content {
+  margin: 0 12.5vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  color: var(--white);
+}
+
+header h1 {
+  margin: 0;
+}
