@@ -17,7 +17,7 @@
   --light-grey: #c5c4c9;
   --white: #f8f8ff;
 
-  --purple: #3b4780;
+  --indigo: #181636;
   --pink: #b2537c;
   --gold: #f4d4a1;
 
@@ -83,7 +83,7 @@ ul {
 }
 
 a {
-  color: var(--purple);
+  color: var(--indigo);
 }
 a:hover,
 a:active,
@@ -93,6 +93,9 @@ a:focus {
 
 .italics {
   font-style: italic;
+}
+.bold {
+  font-weight: 600;
 }
 
 /* NAVIGATION ---------------------------------------------------------------------------------------------------- */
@@ -107,14 +110,15 @@ a:focus {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 
   background-color: var(--white);
   border-bottom: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
 }
 
 .nav-main a {
-  padding: 0 0.25rem;
+  padding: 0 0.3rem;
+  border-radius: 0.1rem;
 
   font-size: 1rem;
   font-weight: 400;
@@ -138,10 +142,38 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.5rem;
+  align-items: center;
 
   font-size: 0.8rem;
 
   background-color: var(--white);
   border-top: 1px solid var(--light-grey); /* Shorthand for borders: https://www.w3schools.com/cssref/pr_border-bottom.php */
+}
+
+footer p {
+  padding: 0;
+  max-width: 30rem;
+}
+
+/* HEADER ---------------------------------------------------------------------------------------------------- */
+
+header {
+  padding: 4rem 2rem;
+  background-color: var(--indigo);
+  text-align: center;
+}
+
+.header-content {
+  margin: 0 12.5vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  color: var(--white);
+}
+
+header h1 {
+  margin: 0;
 }
