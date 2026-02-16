@@ -132,6 +132,20 @@ a:focus {
   background-color: var(--light-purple);
 }
 
+/* PAGE TABLE OF CONTENTS ----------------------------------------------------------------------------------- */
+
+.page-contents {
+  max-width: 40rem;
+  padding: 1rem;
+  border-radius: 0.1rem;
+  background-color: var(--light-purple);
+}
+
+.page-contents h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
 /* FOOTER ---------------------------------------------------------------------------------------------------- */
 footer {
   z-index: 9;
