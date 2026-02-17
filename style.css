@@ -135,7 +135,7 @@ a:focus {
 /* PAGE TABLE OF CONTENTS ----------------------------------------------------------------------------------- */
 
 .page-contents {
-  max-width: 40rem;
+  max-width: fit-content;
   padding: 1rem;
   border-radius: 0.1rem;
   background-color: var(--light-purple);
