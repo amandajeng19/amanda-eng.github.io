@@ -249,3 +249,12 @@ header h1 {
 
   border: 1px solid var(--light-purple);
 }
+
+/* A3 ----------------------------------------------------------------------------------------------------- */
+
+.tag {
+  max-width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.1rem;
+  background-color: var(--light-purple);
+}
