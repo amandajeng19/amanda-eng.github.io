@@ -1,10 +1,11 @@
-import * as d3 from "d3";
+import d3 from "d3";
 
 // Load data from datasets/videogames_wide.csv using d3.csv and then make visualizations
 async function fetchData() {
   const data = await d3.csv("./dataset/videogames_wide.csv");
   return data;
 }
+console.log(data);
 
 fetchData().then(async (data) => {
   const vlSpec = vl
