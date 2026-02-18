@@ -18,6 +18,7 @@
   --white: #f8f8ff;
 
   --indigo: #181636;
+  --purple: #47428a;
   --pink: #b2537c;
   --gold: #f4d4a1;
 
@@ -136,7 +137,7 @@ a:focus {
 
 .page-contents {
   max-width: fit-content;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.1rem;
   background-color: var(--light-purple);
 }
@@ -253,10 +254,12 @@ header h1 {
 /* A3 ----------------------------------------------------------------------------------------------------- */
 
 .tag {
-  max-width: fit-content;
+  /* max-width: fit-content;
   padding: 0.25rem 0.5rem;
   border-radius: 0.1rem;
-  background-color: var(--light-purple);
+  background-color: var(--light-purple); */
+  color: var(--purple);
+  font-style: italic;
 }
 
 .container {
