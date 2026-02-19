@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="../fonts.css" />
+
+    <title>Assignment 2 Visualizations</title>
+  </head>
+  <body>
+    <nav class="nav-main">
+      <a href="../index.html">Home</a>
+      <a href="../a2/personal-site.html">Assignment 2</a>
+      <a href="../a3/vegalite-video-games.html">Assignment 3</a>
+      <a href="https://amanda-eng.myportfolio.com">Portfolio (Main)</a>
+      <a href="mailto:amandajeng19@gmail.com">Email</a>
+    </nav>
+    <header>
+      <div class="header-content">
+        <h1>Assignment 2</h1>
+        <p>
+          Make a Personal Website on GitHub Pages &nbsp;|&nbsp;
+          <span class="italics">February 3, 2026</span>
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="page-contents">
+        <h2>Jump to…</h2>
+        <ul>
+          <li><a href="#cat-vis">Cat Sat on Lap</a></li>
+          <li><a href="#stars-art">Seeing Stars</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="cat-vis">Cat Sat on Lap</h2>
+        <p>
+          An (approximate) visualization of how long my roommate’s cat spent
+          sitting on my lap each day.
+        </p>
+        <div id="bar-chart">
+          <!-- Used https://www.w3schools.com/graphics/svg_intro.asp to figure out how to draw the graph -->
+          <svg width="800" height="600">
+            <!-- outline -->
+            <rect
+              x="0"
+              y="0"
+              width="800"
+              height="600"
+              stroke="black"
+              fill="none"
+            ></rect>
+            <!-- lines -->
+            <line x1="100" y1="500" x2="775" y2="500" stroke="lightgray" />
+            <line x1="100" y1="450" x2="775" y2="450" stroke="lightgray" />
+            <line x1="100" y1="400" x2="775" y2="400" stroke="lightgray" />
+            <line x1="90" y1="350" x2="775" y2="350" stroke="gray" />
+            <line x1="100" y1="300" x2="775" y2="300" stroke="lightgray" />
+            <line x1="100" y1="250" x2="775" y2="250" stroke="lightgray" />
+            <line x1="100" y1="200" x2="775" y2="200" stroke="lightgray" />
+            <line x1="90" y1="150" x2="775" y2="150" stroke="gray" />
+            <!-- bars -->
+            <rect
+              x="145"
+              y="535"
+              width="50"
+              height="15"
+              fill="DarkSlateBlue"
+            ></rect>
+            <rect
+              x="235"
+              y="480"
+              width="50"
+              height="70"
+              fill="DarkSlateBlue"
+            ></rect>
+            <rect
+              x="325"
+              y="240"
+              width="50"
+              height="310"
+              fill="DarkSlateBlue"
+            ></rect>
+            <rect x="415" y="150" width="50" height="400" fill="none"></rect>
+            <rect
+              x="505"
+              y="545"
+              width="50"
+              height="5"
+              fill="DarkSlateBlue"
+            ></rect>
+            <rect
+              x="595"
+              y="500"
+              width="50"
+              height="50"
+              fill="DarkSlateBlue"
+            ></rect>
+            <rect
+              x="685"
+              y="390"
+              width="50"
+              height="160"
+              fill="DarkSlateBlue"
+            ></rect>
+            <!-- axes -->
+            <line
+              x1="75"
+              y1="550"
+              x2="775"
+              y2="550"
+              stroke="black"
+              stroke-width="4px"
+            />
+            <line
+              x1="100"
+              y1="125"
+              x2="100"
+              y2="550"
+              stroke="black"
+              stroke-width="4px"
+            />
+            <!-- labels: x axis (days) -->
+            <text x="143" y="575" fill="black">Sunday</text>
+            <text x="232" y="575" fill="black">Monday</text>
+            <text x="321" y="575" fill="black">Tuesday</text>
+            <text x="400" y="575" fill="black">Wednesday</text>
+            <text x="498" y="575" fill="black">Thursday</text>
+            <text x="600" y="575" fill="black">Friday</text>
+            <text x="681" y="575" fill="black">Saturday</text>
+            <!-- labels: y axis (mins) -->
+            <text x="60" y="455" fill="gray">30</text>
+            <text x="60" y="355" fill="black">60</text>
+            <text x="60" y="255" fill="gray">90</text>
+            <text x="60" y="155" fill="black">120</text>
+            <text x="40" y="400" fill="black" transform="rotate(270 40,400)">
+              Length of time (minutes)
+            </text>
+            <!-- sad face :( -->
+            <!-- Used this to learn how to make the curve: https://www.w3schools.com/graphics/svg_path.asp -->
+            <circle cx="425" cy="515" r="3" fill="gray"></circle>
+            <circle cx="445" cy="515" r="3" fill="gray"></circle>
+            <path
+              d="M 415 537 q 20 -19 40 0"
+              stroke="gray"
+              stroke-width="4"
+              fill="none"
+            />
+          </svg>
+        </div>
+      </section>
+      <section>
+        <h2 id="stars-art">Seeing Stars</h2>
+        <p>Feeling dizzy? Click on the stars to make them disappear.</p>
+        <div id="star-graphic">
+          <svg width="800" height="600">
+            <!-- sky background -->
+            <rect
+              x="0"
+              y="0"
+              width="800"
+              height="600"
+              fill="MidnightBlue"
+            ></rect>
+            <!-- stars -->
+            <!-- Used this to learn how to draw the star: https://www.w3schools.com/graphics/svg_polygon.asp -->
+            <!-- And this to animate them: https://www.w3schools.com/graphics/svg_animation.asp -->
+            <polygon
+              id="yellow-star"
+              class="star"
+              points="97,23 56,134 154,65 40,65 136,134"
+              fill="LightYellow"
+            >
+              <animateTransform
+                class="spin"
+                attributeName="transform"
+                type="rotate"
+                from="0 100 80"
+                to="360 100 80"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="pink-star"
+              class="star"
+              points="197,323 156,434 254,365 140,365 236,434"
+              fill="Pink"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 197 380"
+                to="360 197 380"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="purple-star"
+              class="star"
+              points="397,223 356,334 454,265 340,265 436,334"
+              fill="Thistle"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 397 275"
+                to="360 397 275"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="orange-star"
+              class="star"
+              points="597,423 556,534 654,465 540,465 636,534"
+              fill="PeachPuff"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 597 475"
+                to="360 597 475"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="cream-star"
+              class="star"
+              points="697,123 656,234 754,165 640,165 736,234"
+              fill="AntiqueWhite"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 697 175"
+                to="360 697 175"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+            <polygon
+              id="light-pink-star"
+              class="star"
+              points="497,48 456,159 554,90 440,90 536,159"
+              fill="LightPink"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 497 120"
+                to="360 497 120"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </polygon>
+          </svg>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        This website uses
+        <a href="https://fonts.google.com/specimen/Vend+Sans">Vend Sans</a>, an
+        open-source typeface by Bloom Type Foundry and Baptiste Guesnon. This
+        site was fully written and coded by me — no
+        <abbr title="artificial intelligence">AI</abbr> was used.
+      </p>
+      <p>Copyright &copy; 2026 Amanda Eng.</p>
+    </footer>
+    <script src="vis.js"></script>
+  </body>
+</html>

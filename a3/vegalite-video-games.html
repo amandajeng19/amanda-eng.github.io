@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="../fonts.css" />
+
+    <title>Assignment 3 Visualizations</title>
+  </head>
+  <body>
+    <nav class="nav-main">
+      <a href="../index.html">Home</a>
+      <a href="../a2/personal-site.html">Assignment 2</a>
+      <a href="../a3/vegalite-video-games.html">Assignment 3</a>
+      <a href="https://amanda-eng.myportfolio.com">Portfolio (Main)</a>
+      <a href="mailto:amandajeng19@gmail.com">Email</a>
+    </nav>
+    <header>
+      <div class="header-content">
+        <h1>Assignment 3</h1>
+        <p>
+          Data Visualizations Using Vega-Lite &nbsp;|&nbsp;
+          <span class="italics">February 18, 2026</span>
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="page-contents">
+        <h2>Jump to…</h2>
+        <ul>
+          <li>
+            <a href="#1-dataset">Part 1: Overview of the Dataset</a>
+            <ul>
+              <li>
+                <a href="#1-1-name">1.1 Name</a>
+              </li>
+              <li>
+                <a href="#1-2-platform">1.2 Platform</a>
+              </li>
+              <li>
+                <a href="#1-3-year">1.3 Year</a>
+              </li>
+              <li>
+                <a href="#1-4-genre">1.4 Genre</a>
+              </li>
+              <li>
+                <a href="#1-5-name">1.5 Publisher</a>
+              </li>
+              <li>
+                <a href="#1-6-NA-sales">1.6 Sales in North America</a>
+              </li>
+              <li>
+                <a href="#1-7-EU-sales">1.7 Sales in Europe</a>
+              </li>
+              <li>
+                <a href="#1-8-JP-sales">1.8 Sales in Japan</a>
+              </li>
+              <li>
+                <a href="#1-9-other-sales">1.9 Sales in Other Regions</a>
+              </li>
+              <li>
+                <a href="#1-10-global-sales">1.10 Global Sales</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#2-vis-explorations"
+              >Part 2: Explorations Using Vegalite</a
+            >
+            <ul>
+              <li>
+                <a href="#2-1-global-sales"
+                  >2.1 Global Sales by Genre and Platform</a
+                >
+              </li>
+              <li>
+                <a href="#2-2-sales-over-time"
+                  >2.2 Sales Over Time by Platform and Genre</a
+                >
+              </li>
+              <li>
+                <a href="#2-3-reg-sales-platform"
+                  >2.3 Regional Sales versus Platform</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="1-dataset">Part 1: Overview of the Dataset</h2>
+        <p>
+          The
+          <a
+            href="https://github.com/SIAT-IAT-355/A3-Intro-to-vegalite/tree/main/dataset"
+            >featured dataset</a
+          >
+          includes video game sales data across various regions, genres, and
+          publishers from 1980 to 2020.
+        </p>
+        <p>
+          I’m not really a video games person. Growing up, I rarely met others
+          who had the same favourites as I did. For context, my family had a
+          Wii, and my personal favourite games were Just Dance (2 through 2016),
+          Disney Sing It: Family Hits, and Karaoke Revolution Glee: Volume 3.
+          (We’re music people.)
+        </p>
+        <p>
+          With that in mind, one overarching question I explored with this
+          project was,
+          <span class="bold"
+            >"Am I 'not really a video games person' because the games I liked
+            weren’t popular?"</span
+          >
+        </p>
+        <div>
+          <h3 id="1-1-name">1.1 Name</h3>
+          <p class="tag">Type: Nominal</p>
+          <p>
+            The title of the video game. This dataset lists 16,598 video games.
+          </p>
+        </div>
+        <div>
+          <h3 id="1-2-platform">1.2 Platform</h3>
+          <p class="tag">Type: Nominal/Categorical</p>
+          <p>
+            The gaming platform on which the game was released (e.g. Wii,
+            <abbr title="Nintendo Entertainment System">NES</abbr>).
+          </p>
+          <p>
+            The platforms with the most games sold were DS (2,163) and PS2
+            (2,161). The platforms with the fewest games sold were GG (1), PCFX
+            (1), TG16 (2), and 3DO (3).
+          </p>
+        </div>
+        <div>
+          <h3 id="1-3-year">1.3 Year</h3>
+          <p class="tag">Type: Ordinal/Categorical</p>
+          <p>
+            The year the game was released. The release dates span from
+            1980–2020. However, 2018 and 2019 are missing from the list.
+          </p>
+          <p>
+            Also, 271 games are listed as "N/A" for year of release. For this
+            reason, these games will not be included in any year-based analyses.
+          </p>
+        </div>
+        <div>
+          <h3 id="1-4-genre">1.4 Genre</h3>
+          <p class="tag">Type: Nominal/Categorical</p>
+          <p>
+            The genre of the video game (e.g. Sports, Platform, Racing). Note
+            that 1,739 games are listed under Misc.
+          </p>
+          <p>
+            Action games (3,316) were by far the top genre sold, followed by
+            Sports (2,346). Puzzle (582) and Strategy (681) games were the least
+            common genre.
+          </p>
+          <p>
+            Puzzle and Strategy are <i>my</i> favourite game types — I enjoy
+            solving logic and word puzzles. I am fairly introverted, and I
+            wonder if I prefer this gaming style because it’s usually more
+            independent/solitary.
+          </p>
+        </div>
+        <div>
+          <h3 id="1-5-publisher">1.5 Publisher</h3>
+          <p class="tag">Type: Nominal/Categorical</p>
+          <p>The publisher of the game (e.g. Nintendo).</p>
+          <p>
+            The top five game publishers were Electronic Arts (1,351),
+            Activision (975), Namco Bandai Games (932), Ubisoft (921), and
+            Konami (832).
+          </p>
+          <p>
+            Also, 203 games have an Unknown publisher, and 58 games are listed
+            as "N/A." For this reason, these games will not be included in any
+            publisher-based analyses.
+          </p>
+        </div>
+        <div>
+          <h3 id="1-6-NA-sales">1.6 Sales in North America</h3>
+          <p class="tag">Type: Numerical/Quantitative</p>
+          <p>Total sales in the North America region (in millions of units).</p>
+          <p>The top five selling games in North America were as follows:</p>
+          <ol>
+            <li>Wii Sports (41.49 million copies)</li>
+            <li>Super Mario Bros. (29.08 million copies)</li>
+            <li>Duck Hunt (26.93 million copies)</li>
+            <li>Tetris (23.2 million copies)</li>
+            <li>Mario Kart Wii (15.85 million copies)</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="1-7-EU-sales">1.7 Sales in Europe</h3>
+          <p class="tag">Type: Numerical/Quantitative</p>
+          <p>Total sales in the Europe region (in millions of units).</p>
+          <p>The top five selling games in Europe were as follows:</p>
+          <ol>
+            <li>Wii Sports (29.02 million copies)</li>
+            <li>Mario Kart Wii (12.88 million copies)</li>
+            <li>Wii Sports Resort (11.01 million copies)</li>
+            <li>Nintendogs (11 million copies)</li>
+            <li>Grand Theft Auto V (9.27 million copies)</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="1-8-JP-sales">1.8 Sales in Japan</h3>
+          <p class="tag">Type: Numerical/Quantitative</p>
+          <p>Total sales in Japan (in millions of units).</p>
+          <p>The top five selling games in Japan were as follows:</p>
+          <ol>
+            <li>Pokemon Red/Pokemon Blue (10.22 million copies)</li>
+            <li>Pokemon Gold/Pokemon Silver (7.2 million copies)</li>
+            <li>Super Mario Bros. (6.81 million copies)</li>
+            <li>New Super Mario Bros. (6.5 million copies)</li>
+            <li>Pokemon Diamond/Pokemon Pearl (6.04 million copies)</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="1-9-other-sales">1.9 Sales in Other Regions</h3>
+          <p class="tag">Type: Numerical/Quantitative</p>
+          <p>Total sales in other regions (in millions of units).</p>
+          <p>The top five selling games in other regions were as follows:</p>
+          <ol>
+            <li>Grand Theft Auto: San Andreas (10.57 million copies)</li>
+            <li>Wii Sports (8.46 million copies)</li>
+            <li>Gran Turismo 4 (7.53 million copies)</li>
+            <li>Grand Theft Auto V (4.14 million copies)</li>
+            <li>Mario Kart Wii (3.31 million copies)</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="1-10-global-sales">1.10 Global Sales</h3>
+          <p class="tag">Type: Numerical/Quantitative</p>
+          <p>Total global sales (in millions of units).</p>
+          <p>The top five selling games globally were as follows:</p>
+          <ol>
+            <li>Wii Sports (82.74 million copies)</li>
+            <li>Super Mario Bros. (40.24 million copies)</li>
+            <li>Mario Kart Wii (35.82 million copies)</li>
+            <li>Wii Sports Resort (33 million copies)</li>
+            <li>Pokemon Red/Pokemon Blue (31.37 million copies)</li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <h2 id="2-vis-explorations">Part 2: Visualization Explorations</h2>
+        <div>
+          <h3 id="2-1-global-sales">2.1 Global Sales by Genre and Platform</h3>
+          <h4>
+            Question A: Which video game genres had the highest sales globally?
+          </h4>
+          <p>
+            The Action and Sports genres had the top sales, and the Puzzle,
+            Adventure, and Strategy genres had the fewest.
+          </p>
+          <p>
+            It was interesting to compare this chart to the distribution of
+            games by genre (<a href="#1-4-genre">Section 1.4</a>):
+          </p>
+          <ul>
+            <li>
+              Lots of Adventure games were released, but they only sold
+              moderately in quantity.
+            </li>
+            <li>
+              A moderate number of games were listed as Miscellaneous, but
+              they’re the third-most category for global sales. Perhaps
+              uniqueness has a correlation with popularity.
+            </li>
+          </ul>
+          <h4>
+            Question B: Which gaming platforms had the highest sales globally?
+          </h4>
+          <p>
+            The PS2 had by far the highest game sales, followed by Xbox360 and
+            PS3.
+          </p>
+          <p>
+            Doing a similar comparison with the game distribution by platform
+            (<a href="#1-2-platform">Section 1.2</a>), I noticed:
+          </p>
+          <ul>
+            <li>
+              The quantity of games released for PS2 and DS are similarly high,
+              yet actual sales for PS2 games was significantly higher.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 id="2-2-sales-over-time">
+            2.2 Sales Over Time by Platform and Genre
+          </h3>
+          <h4>
+            Question A: What were the peak sale years and trends for the
+            top-selling gaming platforms?
+          </h4>
+          <p>The peak sale years for a few notable games were as follows:</p>
+          <ul>
+            <li>PS: 1998</li>
+            <li>PS2: 2002 &amp; 2004</li>
+            <li>DS: 2005, 2007, &amp; 2008</li>
+            <li>Xbox360: 2008 &amp; 2010</li>
+            <li>Wii: 2008 &amp; 2009</li>
+            <li>PS3: 2011</li>
+            <li>PS4: 2015</li>
+          </ul>
+          <p>
+            These results don't really surprise me — I remember the Wii versus
+            Xbox preference debates when I was in elementary school around
+            2008–2010.
+          </p>
+          <p>
+            Also, no matter how big, most platforms drop off about 5–10 years
+            after their initial release. I suppose the hype for them dies down,
+            and the next big concole comes along.
+          </p>
+          <h4>
+            Question B: What were the peak sale years and trends for the
+            top-selling genres?
+          </h4>
+          <p>
+            The top selling genres (Action, Sports) didn't really reach any
+            peaks until the early-mid 2000s. For example, Sports game sales more
+            than doubled between 2005 and 2006, while Action games had a major
+            peak in 2002 and a bigger peak in 2008–2009. I’m guessing games in
+            this games required a lot of dexterity and quick reaction times, and
+            it took the passing of the 21st century for vido game technology to
+            reach that level.
+          </p>
+          <p>
+            Meanwhile, Puzzle games and Platformers had minor peaks all through
+            the 1980–2020 period yet remained somewhat low/consistent, never
+            reaching the levels that the top genres did. I think these ones
+            require more thoughtfulness and mental problem solving to play, so
+            the improvements in technology don't make as much of a difference.
+          </p>
+        </div>
+        <div>
+          <h3 id="2-3-reg-sales-platform">
+            2.3 Regional Sales versus Platform
+          </h3>
+          <h4>Question: Which platforms sold the best in each region?</h4>
+          <p>Some key findings from the chart include the following:</p>
+          <ul>
+            <li>
+              Wii games were extremely popular in North America (41.49 million)
+              and Europe (29.02 million), but only moderately popular in Japan
+              and other regions.
+            </li>
+            <li>GB and NES both performed well in Japan and North America.</li>
+          </ul>
+          <p></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        This website uses
+        <a href="https://fonts.google.com/specimen/Vend+Sans">Vend Sans</a>, an
+        open-source typeface by Bloom Type Foundry and Baptiste Guesnon. This
+        site was fully written and coded by me — no
+        <abbr title="artificial intelligence">AI</abbr> was used.
+      </p>
+      <p>Copyright &copy; 2026 Amanda Eng.</p>
+    </footer>
+    <script src="vis.js"></script>
+    <script type="module" src="vegaEmbed.js"></script>
+  </body>
+</html>
