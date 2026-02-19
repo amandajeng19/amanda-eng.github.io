@@ -4,12 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.isdelivr.net/npn/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.isdelivr.net/np/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="stylesheet" type="text/css" href="../fonts.css" />
+
+    <script>
+      const options = {
+        config: {
+          // Vega-Lite default configuration
+        },
+        init: (view) => {
+          // initialize tooltip handler
+          view.tooltip(new vegaTooltip.Handler().call);
+        },
+        view: {
+          // view constructor options
+          // remove the loader if you don't want to default to vega-datasets!
+          loader: vega.loader({
+            baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+          }),
+          renderer: "canvas",
+        },
+      };
+
+      // register vega and vega-lite with the API
+      vl.register(vega, vegaLite, options);
+    </script>
 
     <title>Assignment 3 Visualizations</title>
   </head>
@@ -258,6 +284,7 @@
           <h4>
             Question A: Which video game genres had the highest sales globally?
           </h4>
+          <div id="2-1-viewA"></div>
           <p>
             The Action and Sports genres had the top sales, and the Puzzle,
             Adventure, and Strategy genres had the fewest.
@@ -280,6 +307,7 @@
           <h4>
             Question B: Which gaming platforms had the highest sales globally?
           </h4>
+          <div id="2-1-viewB"></div>
           <p>
             The PS2 had by far the highest game sales, followed by Xbox360 and
             PS3.
@@ -303,6 +331,7 @@
             Question A: What were the peak sale years and trends for the
             top-selling gaming platforms?
           </h4>
+          <div id="2-2-viewA"></div>
           <p>The peak sale years for a few notable games were as follows:</p>
           <ul>
             <li>PS: 1998</li>
@@ -327,6 +356,7 @@
             Question B: What were the peak sale years and trends for the
             top-selling genres?
           </h4>
+          <div id="2-2-viewB"></div>
           <p>
             The top selling genres (Action, Sports) didn't really reach any
             peaks until the early-mid 2000s. For example, Sports game sales more
@@ -349,6 +379,7 @@
             2.3 Regional Sales versus Platform
           </h3>
           <h4>Question: Which platforms sold the best in each region?</h4>
+          <div id="2-3-viewA"></div>
           <p>Some key findings from the chart include the following:</p>
           <ul>
             <li>
