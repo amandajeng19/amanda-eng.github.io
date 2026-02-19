@@ -259,7 +259,6 @@ header h1 {
 }
 
 .container {
-  margin: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
