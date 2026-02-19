@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.isdelivr.net/npn/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.isdelivr.net/np/vega-lite-api@5.6.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.29.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -76,7 +76,7 @@
                 <a href="#1-4-genre">1.4 Genre</a>
               </li>
               <li>
-                <a href="#1-5-name">1.5 Publisher</a>
+                <a href="#1-5-publisher">1.5 Publisher</a>
               </li>
               <li>
                 <a href="#1-6-NA-sales">1.6 Sales in North America</a>
@@ -130,26 +130,12 @@
           includes video game sales data across various regions, genres, and
           publishers from 1980 to 2020.
         </p>
-        <p>
-          I’m not really a video games person. Growing up, I rarely met others
-          who had the same favourites as I did. For context, my family had a
-          Wii, and my personal favourite games were Just Dance (2 through 2016),
-          Disney Sing It: Family Hits, and Karaoke Revolution Glee: Volume 3.
-          (We’re music people.)
-        </p>
-        <p>
-          With that in mind, one overarching question I explored with this
-          project was,
-          <span class="bold"
-            >"Am I 'not really a video games person' because the games I liked
-            weren’t popular?"</span
-          >
-        </p>
         <div>
           <h3 id="1-1-name">1.1 Name</h3>
           <p class="tag">Type: Nominal</p>
           <p>
-            The title of the video game. This dataset lists 16,598 video games.
+            The title of the video game. This dataset includes 16,598 video game
+            entries.
           </p>
         </div>
         <div>
@@ -159,6 +145,9 @@
             The gaming platform on which the game was released (e.g. Wii,
             <abbr title="Nintendo Entertainment System">NES</abbr>).
           </p>
+          <div class="container">
+            <div id="view1-2"></div>
+          </div>
           <p>
             The platforms with the most games sold were DS (2,163) and PS2
             (2,161). The platforms with the fewest games sold were GG (1), PCFX
@@ -172,6 +161,9 @@
             The year the game was released. The release dates span from
             1980–2020. However, 2018 and 2019 are missing from the list.
           </p>
+          <div class="container">
+            <div id="view1-3"></div>
+          </div>
           <p>
             Also, 271 games are listed as "N/A" for year of release. For this
             reason, these games will not be included in any year-based analyses.
@@ -184,6 +176,9 @@
             The genre of the video game (e.g. Sports, Platform, Racing). Note
             that 1,739 games are listed under Misc.
           </p>
+          <div class="container">
+            <div id="view1-4"></div>
+          </div>
           <p>
             Action games (3,316) were by far the top genre sold, followed by
             Sports (2,346). Puzzle (582) and Strategy (681) games were the least
@@ -200,6 +195,9 @@
           <h3 id="1-5-publisher">1.5 Publisher</h3>
           <p class="tag">Type: Nominal/Categorical</p>
           <p>The publisher of the game (e.g. Nintendo).</p>
+          <div class="container">
+            <div id="view1-5"></div>
+          </div>
           <p>
             The top five game publishers were Electronic Arts (1,351),
             Activision (975), Namco Bandai Games (932), Ubisoft (921), and
@@ -215,6 +213,9 @@
           <h3 id="1-6-NA-sales">1.6 Sales in North America</h3>
           <p class="tag">Type: Numerical/Quantitative</p>
           <p>Total sales in the North America region (in millions of units).</p>
+          <div class="container">
+            <div id="view1-6"></div>
+          </div>
           <p>The top five selling games in North America were as follows:</p>
           <ol>
             <li>Wii Sports (41.49 million copies)</li>
@@ -228,6 +229,9 @@
           <h3 id="1-7-EU-sales">1.7 Sales in Europe</h3>
           <p class="tag">Type: Numerical/Quantitative</p>
           <p>Total sales in the Europe region (in millions of units).</p>
+          <div class="container">
+            <div id="view1-7"></div>
+          </div>
           <p>The top five selling games in Europe were as follows:</p>
           <ol>
             <li>Wii Sports (29.02 million copies)</li>
@@ -241,6 +245,9 @@
           <h3 id="1-8-JP-sales">1.8 Sales in Japan</h3>
           <p class="tag">Type: Numerical/Quantitative</p>
           <p>Total sales in Japan (in millions of units).</p>
+          <div class="container">
+            <div id="view1-8"></div>
+          </div>
           <p>The top five selling games in Japan were as follows:</p>
           <ol>
             <li>Pokemon Red/Pokemon Blue (10.22 million copies)</li>
@@ -254,6 +261,9 @@
           <h3 id="1-9-other-sales">1.9 Sales in Other Regions</h3>
           <p class="tag">Type: Numerical/Quantitative</p>
           <p>Total sales in other regions (in millions of units).</p>
+          <div class="container">
+            <div id="view1-9"></div>
+          </div>
           <p>The top five selling games in other regions were as follows:</p>
           <ol>
             <li>Grand Theft Auto: San Andreas (10.57 million copies)</li>
@@ -267,6 +277,9 @@
           <h3 id="1-10-global-sales">1.10 Global Sales</h3>
           <p class="tag">Type: Numerical/Quantitative</p>
           <p>Total global sales (in millions of units).</p>
+          <div class="container">
+            <div id="view1-10"></div>
+          </div>
           <p>The top five selling games globally were as follows:</p>
           <ol>
             <li>Wii Sports (82.74 million copies)</li>
@@ -284,7 +297,9 @@
           <h4>
             Question A: Which video game genres had the highest sales globally?
           </h4>
-          <div id="2-1-viewA"></div>
+          <div class="container">
+            <div id="view2-1-A"></div>
+          </div>
           <p>
             The Action and Sports genres had the top sales, and the Puzzle,
             Adventure, and Strategy genres had the fewest.
@@ -307,7 +322,9 @@
           <h4>
             Question B: Which gaming platforms had the highest sales globally?
           </h4>
-          <div id="2-1-viewB"></div>
+          <div class="container">
+            <div id="view2-1-B"></div>
+          </div>
           <p>
             The PS2 had by far the highest game sales, followed by Xbox360 and
             PS3.
@@ -331,7 +348,9 @@
             Question A: What were the peak sale years and trends for the
             top-selling gaming platforms?
           </h4>
-          <div id="2-2-viewA"></div>
+          <div class="container">
+            <div id="view2-2-A"></div>
+          </div>
           <p>The peak sale years for a few notable games were as follows:</p>
           <ul>
             <li>PS: 1998</li>
@@ -356,7 +375,9 @@
             Question B: What were the peak sale years and trends for the
             top-selling genres?
           </h4>
-          <div id="2-2-viewB"></div>
+          <div class="container">
+            <div id="view2-2-B"></div>
+          </div>
           <p>
             The top selling genres (Action, Sports) didn't really reach any
             peaks until the early-mid 2000s. For example, Sports game sales more
@@ -379,7 +400,9 @@
             2.3 Regional Sales versus Platform
           </h3>
           <h4>Question: Which platforms sold the best in each region?</h4>
-          <div id="2-3-viewA"></div>
+          <div class="container">
+            <div id="view2-3-A"></div>
+          </div>
           <p>Some key findings from the chart include the following:</p>
           <ul>
             <li>
@@ -403,7 +426,6 @@
       </p>
       <p>Copyright &copy; 2026 Amanda Eng.</p>
     </footer>
-    <script src="vis.js"></script>
-    <script type="module" src="vegaEmbed.js"></script>
+    <script type="module" src="vis.js"></script>
   </body>
 </html>
