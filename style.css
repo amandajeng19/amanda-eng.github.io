@@ -254,10 +254,6 @@ header h1 {
 /* A3 ----------------------------------------------------------------------------------------------------- */
 
 .tag {
-  /* max-width: fit-content;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.1rem;
-  background-color: var(--light-purple); */
   color: var(--purple);
   font-style: italic;
 }
@@ -267,7 +263,7 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  gap: 2rem;
 }
 
 #view,
