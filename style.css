@@ -49,7 +49,7 @@ img {
 }
 
 section {
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
 }
 
 /* DEFAULT TEXT STYLING ---------------------------------------------------------------------------------------------------- */
@@ -261,5 +261,5 @@ header h1 {
 .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: fit-content;
 }
