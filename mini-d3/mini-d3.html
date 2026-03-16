@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="../fonts.css" />
+
+    <title>Intro to D3</title>
+  </head>
+  <body>
+    <nav class="nav-main">
+      <a href="../index.html">Home</a>
+      <a href="../a2/personal-site.html">Assignment 2</a>
+      <a href="../a3/vegalite-video-games.html">Assignment 3</a>
+      <a href="../mini-d3/mini-d3.html">Mini D3 Assignment</a>
+      <a href="https://amanda-eng.myportfolio.com">Portfolio (Main)</a>
+      <a href="mailto:amandajeng19@gmail.com">Email</a>
+    </nav>
+    <header>
+      <div class="header-content">
+        <h1>Mini D3 Assignment</h1>
+        <p>
+          Click to Add Circle &nbsp;|&nbsp;
+          <span class="italics">March 16, 2026</span>
+        </p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2 id="cat-vis">Option 1: Click to Add Circle</h2>
+        <p>
+          Clicking anywhere on the D3 canvas adds a new circle at the exact
+          coordinates where you clicked. (Maximum of 10 circles allowed on the
+          canvas at any time.)
+        </p>
+        <!-- <div>
+        <button id="make2017">2017</button>
+        <button id="make2024">2024</button>
+        <button id="sort">Sort by count</button>
+      </div> -->
+        <div id="viscontainer"></div>
+      </section>
+    </main>
+    <script type="module" src="vis.js"></script>
+  </body>
+</html>
