@@ -13,6 +13,7 @@ async function prepareVis() {
 }
 
 async function drawCircle(x, y) {
+  // If there are fewer than 10 circles, draw a circle
   if (circleCount < 10) {
     circle = svg
       .append("circle")
@@ -20,8 +21,8 @@ async function drawCircle(x, y) {
       .attr("fill", "black")
       .attr("cx", x)
       .attr("cy", y);
-    circleCount += 1;
-    console.log(circleCount);
+    circleCount += 1; // increase circle count
+    console.log(`${circleCount} circles`);
   } else {
     alert("Maximum circles reached.");
   }
