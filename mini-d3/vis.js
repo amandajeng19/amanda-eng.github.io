@@ -4,6 +4,7 @@ let svg;
 let circle;
 const width = 800;
 const height = 600;
+let circleCount = 0;
 
 async function prepareVis() {
   svg = d3.create("svg").attr("width", width).attr("height", height);
@@ -12,12 +13,18 @@ async function prepareVis() {
 }
 
 async function drawCircle(x, y) {
-  circle = svg
-    .append("circle")
-    .attr("r", 15)
-    .attr("fill", "black")
-    .attr("cx", x)
-    .attr("cy", y);
+  if (circleCount < 10) {
+    circle = svg
+      .append("circle")
+      .attr("r", 15)
+      .attr("fill", "black")
+      .attr("cx", x)
+      .attr("cy", y);
+    circleCount += 1;
+    console.log(circleCount);
+  } else {
+    alert("Maximum circles reached.");
+  }
 }
 
 async function runApp() {
@@ -27,11 +34,8 @@ async function runApp() {
 }
 
 async function handleClick(event) {
-  console.log("click event:", event);
-
   // Get the coordinates of the click event relative to the SVG container
   const [x, y] = d3.pointer(event);
-  // console.log(x, y);
 
   // Draw new circle using coordinates
   await drawCircle(x, y);
